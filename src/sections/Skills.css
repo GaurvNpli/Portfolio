@@ -1,0 +1,111 @@
+/* Experience Section */
+.experience {
+    padding: var(--section-padding);
+}
+
+.section-title {
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+}
+
+/* Timeline */
+.timeline {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.timeline-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.node-dot {
+    width: 12px;
+    height: 12px;
+    background: var(--accent-cyan);
+    border-radius: 50%;
+    border: 3px solid var(--bg-primary);
+    box-shadow: 0 0 0 2px var(--accent-cyan);
+    z-index: 1;
+    transition: var(--transition-fast);
+}
+
+.timeline-item:hover .node-dot {
+    background: var(--accent-blue);
+    box-shadow: 0 0 0 2px var(--accent-blue), 0 0 16px rgba(97, 175, 239, 0.4);
+}
+
+.node-line {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(to bottom, var(--accent-cyan), var(--border-subtle));
+    margin-top: 4px;
+}
+
+.timeline-item:last-child .node-line {
+    display: none;
+}
+
+.timeline-content {
+    padding-bottom: 2.5rem;
+    flex: 1;
+}
+
+.timeline-year {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent-purple);
+    background: rgba(198, 120, 221, 0.15);
+    padding: 0.25rem 0.6rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.timeline-company {
+    font-size: 0.85rem;
+    color: var(--accent-blue);
+}
+
+.timeline-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 0.75rem;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .timeline-item {
+        gap: 1rem;
+    }
+
+    .timeline-content {
+        padding-bottom: 2rem;
+    }
+}

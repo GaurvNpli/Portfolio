@@ -1,0 +1,27 @@
+/* Footer */
+.footer {
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.footer-logo {
+    font-family: var(--font-mono);
+    color: var(--text-secondary);
+}
+
+.footer-divider {
+    opacity: 0.4;
+}
+
+.footer-year {
+    font-family: var(--font-mono);
+}

@@ -1,0 +1,175 @@
+/* Projects Section */
+.projects {
+    padding: var(--section-padding);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Project Card */
+.project-card {
+    position: relative;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    transition: var(--transition-base);
+    overflow: visible;
+}
+
+/* Inspector Label Tooltip */
+.card-inspector-label {
+    position: absolute;
+    top: -24px;
+    left: 0;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--accent-cyan);
+    background: var(--bg-elevated);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--accent-cyan);
+    opacity: 0;
+    transform: translateY(4px);
+    transition: var(--transition-fast);
+    pointer-events: none;
+}
+
+.project-card:hover .card-inspector-label {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Padding Indicator */
+.padding-indicator {
+    position: absolute;
+    inset: 0;
+    border: 1px dashed var(--accent-green);
+    background: rgba(122, 255, 122, 0.04);
+    border-radius: var(--radius-md);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition-fast);
+}
+
+.project-card.inspecting .padding-indicator {
+    opacity: 1;
+}
+
+/* Margin Indicator */
+.project-card.inspecting {
+    outline: 6px solid rgba(255, 165, 0, 0.06);
+    outline-offset: 4px;
+}
+
+/* Card Content */
+.card-content {
+    position: relative;
+    min-height: 130px;
+}
+
+.live-view,
+.code-view {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.project-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.project-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.tech-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent-blue);
+    background: rgba(97, 175, 239, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(97, 175, 239, 0.2);
+}
+
+/* Project Link */
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--accent-cyan);
+    margin-top: 0.5rem;
+    transition: var(--transition-fast);
+}
+
+.project-link:hover {
+    color: var(--accent-blue);
+    transform: translateX(4px);
+}
+
+/* Code View */
+.code-view {
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    border: 1px solid var(--border-subtle);
+}
+
+.project-code {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    white-space: pre-wrap;
+}
+
+/* Toggle Code Button */
+.toggle-code-btn {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-elevated);
+    cursor: pointer;
+    transition: var(--transition-fast);
+    z-index: 2;
+}
+
+.toggle-code-btn:hover {
+    color: var(--accent-cyan);
+    border-color: var(--accent-cyan);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        margin-top: 1.5rem;
+    }
+}
