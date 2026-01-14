@@ -1,96 +1,53 @@
+import developerAvatar from '../assets/developer-avatar.png'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
 import './About.css'
 
 const About = () => {
+    const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation()
+    const { ref: imageRef, isVisible: imageVisible } = useScrollAnimation({ threshold: 0.2 })
+
     return (
         <section id="about" className="about">
             <div className="container">
-                {/* Widget Label */}
-                <div className="inspector-label">
-                    <span>Widget: Bio</span>
+                <div
+                    ref={sectionRef}
+                    className={`scroll-animate ${sectionVisible ? 'visible' : ''}`}
+                >
+                    <h2 className="section-title">About Me</h2>
+                    <p className="section-subtitle">Get to know me better</p>
                 </div>
 
-                <div className="about-widget">
-                    {/* Widget Header */}
-                    <div className="widget-header">
-                        <span className="widget-bracket">&lt;</span>
-                        <span className="widget-tag">Bio</span>
-                        <span className="widget-bracket">&gt;</span>
+                <div className="about-content">
+                    <div
+                        className={`about-text scroll-animate-left ${sectionVisible ? 'visible' : ''}`}
+                        style={{ transitionDelay: '0.2s' }}
+                    >
+                        <p className="about-intro">
+                            I'm a <span className="highlight">Flutter Developer</span> based in Nepal,
+                            with a focus on crafting beautiful, performant digital experiences.
+                        </p>
+                        <p className="about-paragraph">
+                            I specialize in <span className="highlight">Flutter</span> for cross-platform mobile development
+                            and the <span className="highlight">MERN stack</span> for full-stack web applications. I believe
+                            in clean code, thoughtful architecture, and the power of continuous learning.
+                        </p>
+
+                        <p className="about-paragraph">
+                            I enjoy tackling complex problems and turning them into simple, elegant solutions.
+                            My goal is to build apps & sites that not only works flawlessly but also provides an exceptional user experience.
+                        </p>
                     </div>
 
-                    {/* Content */}
-                    <div className="about-content">
-                        <div className="about-text">
-                            <p className="about-intro">
-                                <span className="code-comment">// Who am I?</span>
-                            </p>
-                            <h2 className="about-title">
-                                I craft <span className="highlight">pixel-perfect</span> mobile
-                                experiences with <span className="highlight">Flutter</span>
-                            </h2>
-                            <p className="about-description">
-                                A passionate developer focused on building beautiful,
-                                performant applications. I believe in clean code,
-                                thoughtful architecture, and creating delightful user experiences.
-                            </p>
-
-                            {/* Stats */}
-                            <div className="about-stats">
-                                <div className="stat">
-                                    <span className="stat-value">3+</span>
-                                    <span className="stat-label">Years Experience</span>
-                                </div>
-                                <div className="stat">
-                                    <span className="stat-value">15+</span>
-                                    <span className="stat-label">Projects Built</span>
-                                </div>
-                                <div className="stat">
-                                    <span className="stat-value">100%</span>
-                                    <span className="stat-label">Passion</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Code-style Info */}
-                        <div className="about-code">
-                            <div className="code-block">
-                                <span className="code-line">
-                                    <span className="code-keyword">class</span>{' '}
-                                    <span className="code-class">Developer</span> {'{'}
-                                </span>
-                                <span className="code-line indent">
-                                    <span className="code-prop">name</span>:{' '}
-                                    <span className="code-string">'Your Name'</span>,
-                                </span>
-                                <span className="code-line indent">
-                                    <span className="code-prop">role</span>:{' '}
-                                    <span className="code-string">'Flutter Developer'</span>,
-                                </span>
-                                <span className="code-line indent">
-                                    <span className="code-prop">location</span>:{' '}
-                                    <span className="code-string">'Remote'</span>,
-                                </span>
-                                <span className="code-line indent">
-                                    <span className="code-prop">skills</span>: [
-                                </span>
-                                <span className="code-line indent-2">
-                                    <span className="code-string">'Flutter'</span>,{' '}
-                                    <span className="code-string">'Dart'</span>,
-                                </span>
-                                <span className="code-line indent-2">
-                                    <span className="code-string">'Firebase'</span>,{' '}
-                                    <span className="code-string">'Clean Architecture'</span>,
-                                </span>
-                                <span className="code-line indent">],</span>
-                                <span className="code-line">{'}'}</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Widget Footer */}
-                    <div className="widget-footer">
-                        <span className="widget-bracket">&lt;/</span>
-                        <span className="widget-tag">Bio</span>
-                        <span className="widget-bracket">&gt;</span>
+                    {/* Developer Avatar */}
+                    <div
+                        ref={imageRef}
+                        className={`about-illustration scroll-animate-right ${imageVisible ? 'visible' : ''}`}
+                    >
+                        <img
+                            src={developerAvatar}
+                            alt="Developer working at computer"
+                            className="developer-avatar"
+                        />
                     </div>
                 </div>
             </div>

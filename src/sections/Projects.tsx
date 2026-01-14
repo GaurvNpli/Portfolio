@@ -52,12 +52,13 @@ const Projects = () => {
 
                 {/* Projects Grid */}
                 <div className="projects-grid">
-                    {projects.map((project) => (
+                    {projects.map((project, index) => (
                         <div
                             key={project.id}
                             className={`project-card ${activeCard === project.id ? 'inspecting' : ''}`}
                             onMouseEnter={() => setActiveCard(project.id)}
                             onMouseLeave={() => setActiveCard(null)}
+                            style={{ animationDelay: `${index * 0.15}s` }}
                         >
                             {/* Inspector Tooltip */}
                             <div className="card-inspector-label">

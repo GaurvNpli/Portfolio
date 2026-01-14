@@ -1,149 +1,87 @@
-/* About / Bio Section */
+/* About Section */
 .about {
     padding: var(--section-padding);
 }
 
-.about-widget {
-    background: var(--bg-surface);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
-    overflow: hidden;
+.section-title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-blue) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-/* Widget Header/Footer */
-.widget-header,
-.widget-footer {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    padding: 0.75rem 1.25rem;
-    background: var(--bg-elevated);
-    border-bottom: 1px solid var(--border-subtle);
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 3rem;
 }
 
-.widget-footer {
-    border-bottom: none;
-    border-top: 1px solid var(--border-subtle);
-}
-
-/* Content */
+/* About Content - Two Column */
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    padding: 2.5rem;
+    gap: 4rem;
+    align-items: center;
 }
 
 .about-text {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
 }
 
-.about-intro .code-comment {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    color: var(--text-muted);
+.about-intro {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    line-height: 1.6;
 }
 
-.about-title {
-    font-size: clamp(1.5rem, 4vw, 2rem);
-    font-weight: 600;
-    line-height: 1.3;
-}
-
-.about-title .highlight {
-    color: var(--accent-cyan);
-}
-
-.about-description {
+.about-paragraph {
     color: var(--text-secondary);
+    line-height: 1.8;
     font-size: 1rem;
-    line-height: 1.7;
 }
 
-/* Stats */
-.about-stats {
+.about-text .highlight {
+    color: var(--accent-cyan);
+    font-weight: 500;
+}
+
+/* Developer Avatar */
+.about-illustration {
     display: flex;
-    gap: 2rem;
-    margin-top: 1.5rem;
-}
-
-.stat {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat-value {
-    font-family: var(--font-mono);
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: var(--accent-blue);
-}
-
-.stat-label {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-}
-
-/* Code Block */
-.about-code {
-    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.code-block {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    line-height: 1.8;
-    background: var(--bg-primary);
-    padding: 1.5rem;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border-subtle);
+.developer-avatar {
+    max-width: 320px;
     width: 100%;
-}
-
-.code-line {
-    display: block;
-}
-
-.code-line.indent {
-    padding-left: 1.5rem;
-}
-
-.code-line.indent-2 {
-    padding-left: 3rem;
-}
-
-.code-keyword {
-    color: var(--accent-purple);
-}
-
-.code-class {
-    color: var(--accent-yellow);
-}
-
-.code-prop {
-    color: var(--accent-blue);
-}
-
-.code-string {
-    color: var(--accent-green);
+    height: auto;
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .about-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 1.5rem;
+        gap: 3rem;
     }
 
-    .about-stats {
-        flex-wrap: wrap;
-        gap: 1.5rem;
+    .about-illustration {
+        order: -1;
     }
 
-    .code-block {
-        font-size: 0.75rem;
+    .developer-avatar {
+        max-width: 260px;
+    }
+}
+
+@media (max-width: 600px) {
+    .developer-avatar {
+        max-width: 220px;
     }
 }
