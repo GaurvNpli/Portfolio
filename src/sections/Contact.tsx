@@ -75,7 +75,12 @@ const Contact = () => {
                     <div className="contact-info">
                         <h3 className="info-title">Let's connect</h3>
                         <div className="info-links">
-                            <a href="mailto:gauravnepal5157@gmail.com" className="info-link">
+                            <a
+                                href="mailto:gauravnepal5157@gmail.com"
+                                className="info-link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <span className="link-icon">
                                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                                         <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />

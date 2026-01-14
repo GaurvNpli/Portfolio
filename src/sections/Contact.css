@@ -118,6 +118,8 @@
     border-radius: var(--radius-sm);
     border: 1px solid var(--border-subtle);
     transition: var(--transition-fast);
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .info-link:hover {
