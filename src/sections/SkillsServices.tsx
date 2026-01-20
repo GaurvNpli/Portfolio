@@ -11,17 +11,23 @@ interface Service {
 }
 
 const technologies: Technology[] = [
+    // Development
     { name: 'Flutter', icon: 'devicon-flutter-plain' },
     { name: 'Dart', icon: 'devicon-dart-plain' },
+    { name: 'Postman', icon: 'devicon-postman-plain' },
+    { name: 'Selenium', icon: 'devicon-selenium-original' },
     { name: 'React', icon: 'devicon-react-original' },
+    { name: 'TypeScript', icon: 'devicon-typescript-plain' },
     { name: 'Node.js', icon: 'devicon-nodejs-plain' },
     { name: 'MongoDB', icon: 'devicon-mongodb-plain' },
-    { name: 'Express', icon: 'devicon-express-original' },
     { name: 'Firebase', icon: 'devicon-firebase-plain' },
-    { name: 'TypeScript', icon: 'devicon-typescript-plain' },
 ]
 
 const services: Service[] = [
+    {
+        title: 'QA Engineering',
+        description: 'Manual & automation testing for reliable, bug-free software',
+    },
     {
         title: 'App Development',
         description: 'Native-quality Android & iOS apps with Flutter',
@@ -31,26 +37,29 @@ const services: Service[] = [
         description: 'Fully responsive, modern web applications',
     },
     {
-        title: 'Web Design',
-        description: 'Beautiful, intuitive website designs',
+        title: 'Test Automation',
+        description: 'Automated testing pipelines with Selenium, Cypress & Jest',
     },
     {
         title: 'UI/UX Design',
         description: 'User-centered interface and experience design',
     },
     {
-        title: 'Creative Solutions',
-        description: 'Innovative approaches to complex problems',
-    },
-    {
-        title: 'API Development',
-        description: 'Robust backend APIs and integrations',
+        title: 'API Testing',
+        description: 'Thorough API validation with Postman & automated scripts',
     },
 ]
 
 // Service icons as SVG components matching the theme
 const ServiceIcon = ({ type }: { type: string }) => {
     const icons: Record<string, React.ReactNode> = {
+        'QA Engineering': (
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M9 12l2 2 4-4" />
+                <path d="M12 3a9 9 0 109 9 4.5 4.5 0 00-4.5-4.5" />
+                <circle cx="12" cy="12" r="3" />
+            </svg>
+        ),
         'App Development': (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <rect x="5" y="2" width="14" height="20" rx="2" />
@@ -63,12 +72,9 @@ const ServiceIcon = ({ type }: { type: string }) => {
                 <polyline points="8 6 2 12 8 18" />
             </svg>
         ),
-        'Web Design': (
+        'Test Automation': (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M12 19l7-7 3 3-7 7-3-3z" />
-                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
-                <path d="M2 2l7.586 7.586" />
-                <circle cx="11" cy="11" r="2" />
+                <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.77 3.77z" />
             </svg>
         ),
         'UI/UX Design': (
@@ -78,14 +84,10 @@ const ServiceIcon = ({ type }: { type: string }) => {
                 <path d="M9 21V9" />
             </svg>
         ),
-        'Creative Solutions': (
+        'API Testing': (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-            </svg>
-        ),
-        'API Development': (
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <path d="M20 14.66V20a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h5.34" />
+                <polygon points="18 2 22 6 12 16 8 16 8 12 18 2" />
             </svg>
         ),
     }

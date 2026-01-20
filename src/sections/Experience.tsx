@@ -10,12 +10,6 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
     {
-        year: '2025',
-        title: 'Full-Stack Developer',
-        company: 'Niko Niko Japanese Language',
-        description: 'Built a website and worked as IT technician for a Japanese language school.',
-    },
-    {
         year: '2022',
         title: 'IT and Hardware Technician',
         company: 'Infotech Computers',

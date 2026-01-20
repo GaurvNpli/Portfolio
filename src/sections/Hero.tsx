@@ -25,7 +25,7 @@ const Hero = () => {
 
                     {/* Role */}
                     <p className="hero-role">
-                        Developer building <span className="highlight">beautiful & clean</span> mobile and web experiences
+                        <span className="highlight">QA Engineer</span> & Developer crafting <span className="highlight">reliable, beautiful</span> mobile and web experiences
                     </p>
 
                     {/* CTA */}

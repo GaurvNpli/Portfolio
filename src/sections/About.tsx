@@ -23,18 +23,19 @@ const About = () => {
                         style={{ transitionDelay: '0.2s' }}
                     >
                         <p className="about-intro">
-                            I'm a <span className="highlight">Flutter Developer</span> based in Nepal,
-                            with a focus on crafting beautiful, performant digital experiences.
+                            I'm a <span className="highlight">QA Engineer</span> & <span className="highlight">Developer</span> based in Nepal,
+                            passionate about building and ensuring quality in digital products.
                         </p>
                         <p className="about-paragraph">
-                            I specialize in <span className="highlight">Flutter</span> for cross-platform mobile development
-                            and the <span className="highlight">MERN stack</span> for full-stack web applications. I believe
-                            in clean code, thoughtful architecture, and the power of continuous learning.
+                            I specialize in <span className="highlight">QA Engineering</span> with expertise in manual & automation testing,
+                            <span className="highlight">Flutter</span> for cross-platform mobile development,
+                            and the <span className="highlight">MERN stack</span> for full-stack web applications.
+                            I believe in clean code, thorough testing, and delivering bug-free experiences.
                         </p>
 
                         <p className="about-paragraph">
-                            I enjoy tackling complex problems and turning them into simple, elegant solutions.
-                            My goal is to build apps & sites that not only works flawlessly but also provides an exceptional user experience.
+                            I enjoy finding edge cases, breaking things intentionally, and ensuring every feature works flawlessly.
+                            My goal is to build quality-first apps & websites that provide an exceptional user experience.
                         </p>
                     </div>
 
