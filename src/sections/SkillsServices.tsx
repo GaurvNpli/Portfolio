@@ -11,42 +11,44 @@ interface Service {
 }
 
 const technologies: Technology[] = [
-    // Development
-    { name: 'Flutter', icon: 'devicon-flutter-plain' },
-    { name: 'Dart', icon: 'devicon-dart-plain' },
-    { name: 'Postman', icon: 'devicon-postman-plain' },
-    { name: 'Selenium', icon: 'devicon-selenium-original' },
+    // Front-end (Primary)
     { name: 'React', icon: 'devicon-react-original' },
     { name: 'TypeScript', icon: 'devicon-typescript-plain' },
+    { name: 'JavaScript', icon: 'devicon-javascript-plain' },
+    { name: 'HTML5', icon: 'devicon-html5-plain' },
+    { name: 'CSS3', icon: 'devicon-css3-plain' },
+    { name: 'Next.js', icon: 'devicon-nextjs-plain' },
     { name: 'Node.js', icon: 'devicon-nodejs-plain' },
-    { name: 'MongoDB', icon: 'devicon-mongodb-plain' },
-    { name: 'Firebase', icon: 'devicon-firebase-plain' },
+    // Mobile & QA (Secondary)
+    { name: 'Flutter', icon: 'devicon-flutter-plain' },
+    { name: 'Selenium', icon: 'devicon-selenium-original' },
+    { name: 'Postman', icon: 'devicon-postman-plain' },
 ]
 
 const services: Service[] = [
     {
-        title: 'QA Engineering',
-        description: 'Manual & automation testing for reliable, bug-free software',
-    },
-    {
-        title: 'App Development',
-        description: 'Native-quality Android & iOS apps with Flutter',
-    },
-    {
         title: 'Web Development',
-        description: 'Fully responsive, modern web applications',
-    },
-    {
-        title: 'Test Automation',
-        description: 'Automated testing pipelines with Selenium, Cypress & Jest',
+        description: 'Fully responsive, modern web applications with React & Next.js',
     },
     {
         title: 'UI/UX Design',
         description: 'User-centered interface and experience design',
     },
     {
-        title: 'API Testing',
-        description: 'Thorough API validation with Postman & automated scripts',
+        title: 'Front-end Engineering',
+        description: 'Clean, performant code with TypeScript & modern frameworks',
+    },
+    {
+        title: 'App Development',
+        description: 'Cross-platform Android & iOS apps with Flutter',
+    },
+    {
+        title: 'QA Engineering',
+        description: 'Manual & automation testing for reliable software',
+    },
+    {
+        title: 'Test Automation',
+        description: 'Automated testing with Selenium, Cypress & Jest',
     },
 ]
 
@@ -84,10 +86,13 @@ const ServiceIcon = ({ type }: { type: string }) => {
                 <path d="M9 21V9" />
             </svg>
         ),
-        'API Testing': (
+        'Front-end Engineering': (
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                <path d="M20 14.66V20a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2h5.34" />
-                <polygon points="18 2 22 6 12 16 8 16 8 12 18 2" />
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <path d="M8 21h8" />
+                <path d="M12 17v4" />
+                <path d="M7 8l3 3-3 3" />
+                <path d="M14 14h3" />
             </svg>
         ),
     }

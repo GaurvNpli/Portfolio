@@ -23,19 +23,18 @@ const About = () => {
                         style={{ transitionDelay: '0.2s' }}
                     >
                         <p className="about-intro">
-                            I'm a <span className="highlight">QA Engineer</span> & <span className="highlight">Developer</span> based in Nepal,
-                            passionate about building and ensuring quality in digital products.
+                            I'm a <span className="highlight">Front-end Developer</span> based in Nepal,
+                            passionate about crafting beautiful and performant web experiences.
                         </p>
                         <p className="about-paragraph">
-                            I specialize in <span className="highlight">QA Engineering</span> with expertise in manual & automation testing,
-                            <span className="highlight">Flutter</span> for cross-platform mobile development,
-                            and the <span className="highlight">MERN stack</span> for full-stack web applications.
-                            I believe in clean code, thorough testing, and delivering bug-free experiences.
+                            I specialize in building <span className="highlight">modern web applications</span> with React, TypeScript, and Next.js.
+                            I also bring experience in <span className="highlight">Flutter</span> for cross-platform mobile development
+                            and <span className="highlight">QA Engineering</span> to ensure everything works flawlessly.
                         </p>
 
                         <p className="about-paragraph">
-                            I enjoy finding edge cases, breaking things intentionally, and ensuring every feature works flawlessly.
-                            My goal is to build quality-first apps & websites that provide an exceptional user experience.
+                            I believe in clean code, pixel-perfect designs, and delivering exceptional user experiences.
+                            My diverse background in testing helps me build robust, bug-free applications from the start.
                         </p>
                     </div>
 
