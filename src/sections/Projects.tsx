@@ -7,6 +7,7 @@ interface Project {
     description: string
     tech: string[]
     link?: string
+    image?: string
 }
 
 const projects: Project[] = [
@@ -16,6 +17,7 @@ const projects: Project[] = [
         description: 'a Centralized platform for lost and found items.',
         tech: ['React', 'Node.js', 'Express', 'MongoDB'],
         link: 'https://github.com/GaurvNpli/KhojSewa--A-Smart-Lost-and-found-System',
+        image: '/Khojsewa.png',
     },
     {
         id: 2,
@@ -23,6 +25,7 @@ const projects: Project[] = [
         description: 'a Flutter app that brings news and books together in one place.',
         tech: ['Flutter', 'Riverpod', 'SQLite'],
         link: 'https://github.com/GaurvNpli/Omni_Reader',
+        image: '/OmniReader.jfif',
     },
     {
         id: 3,
@@ -64,6 +67,17 @@ const Projects = () => {
                             <div className="card-inspector-label">
                                 ProjectCard
                             </div>
+
+                            {/* Project Image */}
+                            {project.image && (
+                                <div className="project-image-wrapper">
+                                    <img
+                                        src={project.image}
+                                        alt={`${project.title} preview`}
+                                        className="project-image"
+                                    />
+                                </div>
+                            )}
 
                             {/* Card Content or Code View */}
                             <div className={`card-content ${showCode === project.id ? 'show-code' : ''}`}>
