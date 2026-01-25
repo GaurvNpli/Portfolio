@@ -21,6 +21,14 @@ const projects: Project[] = [
     },
     {
         id: 2,
+        title: 'Ingredio',
+        description: 'an instant recipe generation for the ingredients you already own.',
+        tech: ['Next.js', 'React', 'Node.js', 'TheMealDB API'],
+        link: 'https://github.com/GaurvNpli/Ingredio',
+        image: '/Ingredio.png',
+    },
+    {
+        id: 3,
         title: 'OmniReader',
         description: 'a Flutter app that brings news and books together in one place.',
         tech: ['Flutter', 'Riverpod', 'SQLite'],
@@ -28,14 +36,14 @@ const projects: Project[] = [
         image: '/OmniReader.jfif',
     },
     {
-        id: 3,
+        id: 4,
         title: 'Task Manager',
         description: 'Productivity app with kanban boards and team collaboration.',
         tech: ['Flutter', 'BLoC', 'GraphQL'],
         link: '#',
     },
     {
-        id: 4,
+        id: 5,
         title: 'Social Platform',
         description: 'Community app with real-time chat and content sharing.',
         tech: ['Flutter', 'Firebase', 'WebSocket'],
